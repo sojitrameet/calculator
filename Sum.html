@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="load()">
+    
+    No 1 : <input type="text" id="no1"><br> <br>
+    No 2 : <input type="text" id="no2"><br> <br>
+    <h3>On click :</h3>
+    Sum : <input type="button" id="sum1" onclick="sum()" value="onclick"> <br> <br>
+
+    <span>Sum of Two Digit : <span id="onclick">0</span></span><br> <br>
+
+    <h3>On dblclick :</h3>
+
+    Sum : <input type="button" ondblclick="sum()" value="ondblclick"> <br> <br>
+    <!-- <span>Sum of Two Digit : <span id="ondblclick">0</span></span> -->
+
+    <h3>On Mouseover :</h3>
+
+    Sum : <input type="button" onmouseover="sum()" value="onmouseover"> <br> <br>
+    <h3>On Mouseout :</h3>
+
+    Sum : <input type="button" onmouseout="sum()" value="onmouseout"> <br> <br>
+
+    <h3>On Key press :</h3>
+    
+    Name  : <input type="text" id="name" onkeypress="name()"><br> <br>
+
+    <h3>On Key up :</h3>
+
+    City  : <input type="text" id="city" onkeyup="city()"><br> <br>
+
+    <h3>On Focus</h3>
+
+    State : <input type="text" id="state" onfocus="state()"><br><br>
+
+    <h3>On Blure</h3>
+
+    Blure : <input type="text" id="blr" onfocus="blr()"><br><br>
+
+    <h3>On Change </h3>
+
+    <select id="mysel" onchange="mychg()">
+        <option value="CDMI">CDMI</option>
+        <option value="TOPS">TOPS</option>
+        <option value="RAD & WHITE">RAD & WHITE</option>
+       
+    </select>
+    <p id="chg"> </p>
+
+    <h3>On submit </h3> 
+    <form action="" onsubmit="submitf()">
+            <input type="text" >
+          <input type="submit" value="submit">
+
+    </form>
+    <h3>On Reset </h3> 
+
+    <form action="" onreset="rest()">
+            <input type="text" >
+          <input type="reset" value="Reset">
+
+    </form>
+    
+    <script>
+        function sum()
+         {
+            num1 = document.getElementById("no1").value;
+            num2 = document.getElementById("no2").value;
+            sums = parseInt(num1) + parseInt(num2);
+            document.getElementById("onclick").innerText = sums;
+
+            // sum1 = parseInt(num1) + parseInt(num2);
+            // document.getElementById("ondblclick").innerText = sum1;
+            console.log(sums);
+        }
+        
+        function name()
+        {
+             alert("Hello Creative")
+
+           
+        //    if(na!="")
+        //    {
+        //     // console.log(na.value.toUpperCase());
+        //     document.getElementById("name").innerText = na;
+        //    }
+            // console.log(na.value)
+        }
+        
+        function city()
+        {
+            let x = document.getElementById("city");
+            x.value = x.value.toUpperCase();
+        }
+        function state()
+        {
+            document.getElementById("state").style.background = "red";
+        }
+        function load()
+        {
+            alert("Page Is loaded");
+        }
+        function blr()
+        {
+            document.getElementById("blr").style.background = "blue"
+        }
+        function mychg()
+        {
+           choice = document.getElementById("mysel").value;
+            document.getElementById("chg").innerHTML = "My SELECT : "+choice;
+        }
+        function submitf()
+        {
+            alert("Submit Form")
+        }
+        function rest()
+        {
+            alert("Reset Form")
+        }
+    </script>
+</body>
+
+</html>

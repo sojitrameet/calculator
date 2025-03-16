@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a JavaScript program that accepts a number as input and inserts dashes (-) 
+        // between each even number. For example if you accept 025468 the output 
+        // should be 0-254-6-8.
+
+        // n = prompt("Enter N Number : ",0);
+        array = [];
+        for (i = 0; i <= 5; i++) {
+            arr = parseInt(prompt("Enter The Number : " + i));
+            array.push(arr);
+        }
+        result = [];
+        for (i = 0; i <= 5; i++) {
+
+
+            if (array[i] % 2 == 0) {
+                
+                if(array[i]%2 == array[i-1] % 2)
+                {
+                    result.push("-");
+                }
+                result.push(array[i])
+                // document.write("t", result);
+
+            }
+            else {
+                result.push(array[i])
+                // document.write("o", result);
+
+            }
+
+        }
+        document.write(result.join(""));
+
+    </script>
+</body>
+
+</html>

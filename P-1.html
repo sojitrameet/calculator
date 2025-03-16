@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Write a program in C to read n number of values in an array and display them in reverse order.
+        // total 
+
+        total = 0;
+        array = [];
+        for (i = 1; i <= 5; i++) {
+            arr = parseInt(prompt("Enetr The Number :" + i));
+            array.push(arr);
+            document.write("<br>" + arr);
+        }
+        
+        // document.write("<br> Len:",array.length);
+        // document.write("<br>Low Reverse : ",array.reverse())
+        document.write("<br> REVERSE");
+
+        for(i = 5 ; i > 0; i--)
+        {
+            
+            document.write("<br>" ,array.pop(array[i]));
+            // document.write(array)
+
+        }
+
+
+        
+      
+        // document.write("<br>Low Reverse : ",rev)
+    </script>
+</body>
+
+</html>

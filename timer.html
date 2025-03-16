@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .showtime {
+            font-size: 30px;
+        }
+    </style>
+    <span id="hou">0</span>
+    <span id="min">0</span>
+    <span id="sec">0</span>
+
+
+    <input type="button" onclick="timer()" value="Timer Start">
+    <input type="reset" value="Reset" onclick="reset()">
+    <span id="showtime"></span>
+
+    <script>
+        sec = 0;
+        hou = 0;
+        min = 0
+        let timerInterval;
+        function timer() {
+            setInterval(() => {
+                sec++;
+                if (sec >= 60) {
+                    sec = 0;
+                    min++;
+                }
+                if (min >= 60) {
+                    min = 0;
+                    hor++;
+                }
+                document.getElementById("sec").innerText = sec;
+                document.getElementById("min").innerText = min;
+
+            }, 1000)
+        }
+        function reset() {
+            clearInterval(timerInterval); 
+            document.getElementById("sec").innerText = "0";
+            document.getElementById("min").innerText = "0";
+            document.getElementById("hor").innerText = "0";
+            sec = 0;
+            hou = 0;
+            min = 0;
+
+        }
+    </script>
+</body>
+
+</html>

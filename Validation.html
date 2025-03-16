@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, #ff0077, rgb(74, 24, 192));
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #ff0077;
+            text-align: center;
+        }
+
+        .form-box {
+            width: 650px;
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .column {
+            width: 100%;
+        }
+
+        .column .i1 {
+            width: 90%;
+            height: 30px;
+            padding-left: 5px;
+            outline-color: #ff0077;
+        }
+
+        .column .i2 {
+            accent-color: #ff0077;
+        }
+
+        .column p {
+            margin-bottom: 5px;
+            font-weight: 550;
+            color: rgb(39, 39, 39);
+        }
+
+        .btn {
+            border: none;
+            outline: none;
+            background-color: #ff0077;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 3px;
+        }
+
+        #btn2 {
+            background-color: red;
+        }
+
+        span {
+            color: red;
+            font-size: 14px;
+
+        }
+
+        .fa-circle-check {
+            color: green;
+        }
+
+        /* Make as Responsive */
+        @media screen and (max-width:690px) {
+            .container {
+                height: 100%;
+            }
+
+            .form-box {
+                margin: 10px;
+            }
+
+            .row {
+                display: block;
+            }
+
+            .column {
+                margin-top: 10px;
+            }
+
+            .column .i1 {
+                width: 95%;
+            }
+
+            h1 {
+                margin-top: 30px;
+            }
+        }
+
+        /* processor.html */
+
+        h1 {
+            color: #fff;
+        }
+    </style>
+    <div class="container">
+
+        
+        <div class="form-box">
+            <div class="content">
+                <h2 id="title">Student Details Form</h2>
+
+                <form id='myForm' action="" onsubmit="return formvali()">
+                    <div class="row">
+                        <div class="column">
+                            <p>Name</p>
+                            <input class="i1" type="text" name="name" placeholder="Enter Name" id="name" />
+                            <span id="nameError"></span>
+                        </div>
+                        <div class="column">
+                            <p>Email</p>
+                            <input class="i1" type="text" name="email" placeholder="Email" id="email">
+                            <span id="emailError"></span>
+                            <!-- <span id="mail"></span> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <p>Usename</p>
+                            <input class="i1" type="text" maxlength="8" name="school" placeholder="username" id="user">
+                            <span id="schoolError"></span>
+                        </div>
+                        <div class="column">
+                            <p>Password</p>
+                            <input class="i1" type="password" maxlength="8" name="phone" placeholder="Password"
+                                id="pass">
+                            <span id="phoneError"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <p>Gender</p>
+                            <input type="radio" name="gender" value="Male"> Male <br>
+                            <input type="radio" name="gender" value="Female"> Female <br>
+                            <span id="radioError"></span>
+                        </div>
+                        <div class="column">
+                            <p>Course</p>
+                            <input type="checkbox" name="course[]" value="IT"> Ai <br>
+                            <input type="checkbox" name="course[]" value="HRM"> Full Stack <br>
+                            <input type="checkbox" name="course[]" value="English"> English <br>
+                            <input type="checkbox" name="course[]" value="Grapic Design"> Grapic Design <br>
+                            <span id="checkBoxError"></span>
+                        </div>
+                        <div class="column">
+                            <p>Institute Location</p>
+                            <select name="location">
+                                <option value="surat" selected>Surat</option>
+                                <option value="Ahemdabad">Ahemdabad</option>
+                                <option value="Navsari">Navsari</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <input type="submit" class="btn" id="btn1" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+      
+
+        function formvali() {
+
+            // alert("hbekko")
+
+
+           
+
+            name = document.getElementById("name").value
+            email = document.getElementById("email").value;
+            user = document.getElementById("user").value;
+            pass = document.getElementById("pass").value;
+            //     chek = document.getElementById("checkbox").value;
+
+
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("schoolError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+
+            
+
+            if (name == "") {
+                // alert("jgshwa")
+                document.getElementById("nameError").innerText = "name be must field";
+                return false;
+            }
+            if (email == "") {
+                document.getElementById("emailError").innerText = "Email Must Be Fild";
+                return false;
+            }
+            else if (validateEmail(email) != true) {
+
+                document.getElementById("emailError").innerText = "please enter th spicial charcters @,#,$";
+                return false;
+
+            }
+            if(user == "")
+            {
+                document.getElementById("schoolError").innerText = "UserName Must Be Fild";
+                return false
+            }
+            if(pass == "")
+            {
+                document.getElementById("phoneError").innerText = "Password Must Be Fild";
+                return false
+            }
+            if(chek == "")
+            {
+                document.getElementById("checkBoxError").innerText = "Select Course";
+                return false
+            }
+          
+
+            return false
+        }
+    </script>
+</body>
+
+</html>

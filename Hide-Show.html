@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="hi">Hide Detail ..</h2>
+    <h2 id="sh">shoe Detail ..</h2>
+
+    <input type="button" onclick="on()" value="Hide">
+    <input type="button" onclick="off()" value="show">
+    <script>
+        function on()
+        {
+            document.getElementById("hi").style.display = "none"
+            document.getElementById("sh").style.display = "block"
+
+        }
+        function off()
+        {
+            document.getElementById("hi").style.display = "block"
+            document.getElementById("sh").style.display = "none"
+
+        }
+    </script>
+
+</body>
+</html>

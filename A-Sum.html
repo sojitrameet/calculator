@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onreset="reset()">
+
+            No 1 : <input type="text" id="no1"><br> <br>
+            No 2 : <input type="text" id="no2"><br> <br>
+        <input type="button" id="sum1" onclick="pluse()" value="+"> 
+        <input type="button" id="sum2" onclick="minu()" value="-"> 
+        <input type="button" id="sum3" onclick="div()" value="/"> 
+        <input type="button" id="sum4" onclick="mod()" value="%"> 
+        <input type="reset" id="re" onreset="reset()" value="CE">
+
+
+            <h2 id="out">  </h2>
+    </form>
+    <script> 
+        function pluse() {
+                num1 = document.getElementById("no1").value;
+                num2 = document.getElementById("no2").value;
+                sum = parseInt(num1) + parseInt(num2);
+                document.getElementById("out").innerText = "Addition :"+sum;
+            }
+
+            function minu() {
+                num1 = document.getElementById("no1").value;
+                num2 = document.getElementById("no2").value;
+                sum = parseInt(num1) - parseInt(num2);
+                document.getElementById("out").innerText = "Subtraction :"+sum;
+            }
+
+            function div() {
+
+                num1 = document.getElementById("no1").value;
+                num2 = document.getElementById("no2").value;
+                sum = parseInt(num1) / parseInt(num2);
+                document.getElementById("out").innerText = "Divide :"+sum;
+            }
+
+            function mod() {
+                num1 = document.getElementById("no1").value;
+                num2 = document.getElementById("no2").value;
+                sum = parseInt(num1) % parseInt(num2);
+                document.getElementById("out").innerText = "Module :"+sum;
+            }
+
+            function reset()
+            {
+                alert("meer...");
+            }
+            // alert("Cal")
+            // document.getElementById("7").innerText = la;
+            // la = document.getElementById("display").innerText;
+            display.value += number;
+    </script>
+</body>
+
+</html>

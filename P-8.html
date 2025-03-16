@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        // remove duplicate 
+        num = [];
+        for (i = 0; i <= 5; i++) {
+            newn = prompt("Enter Number : ", 0);
+            num.push(newn);
+        }
+    //    document.write("<br>" + ncity);
+        //  date = []
+        for(i=0;i<=5;i++)
+        {
+         rem = num.filter((value,index) => 
+         num.indexOf(value)  === index);
+        }
+       document.write(rem);
+       document.write("<br>" + date);
+
+
+ </script>
+</body>
+
+</html>

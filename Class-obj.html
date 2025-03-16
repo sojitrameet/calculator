@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class carr 
+        {
+            constructor(a,b)
+            {
+                this.a = a;
+                this.b = b;
+            }
+            age()
+            {
+                document.write("<br>Sum : "+ this.a + this.b)
+            }
+        }
+        const c = new carr(20,40);
+        c.age();
+
+        class car 
+        {
+            constructor(brand)
+            {
+                this.brand = brand;
+
+            }
+            present()
+            {
+                document.write("Car Brand"+this.brand)
+            }
+        }
+        class model extends car 
+        {
+            constructor(brand,model)
+            {
+                super(brand);
+                this.model = model;
+
+            }
+            show()
+            {
+                super.present();
+                document.write("And Model Is : "+this.model)
+            }
+        }
+        const m = new model("Ford","Mustang");
+        m.show();
+    </script>
+</body>
+</html>

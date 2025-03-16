@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            /* background-image: url(ds.png); */
+            background-position: center;
+            background-size: cover;
+            /* color:white; */
+            font-weight:900 ;
+            background-attachment: fixed;
+
+        }
+
+        .boxcard {
+            display: flex;
+            /* background-color: violet; */
+            /* border-radius: 250px 0px 260px; */
+            /* background-image: url(bac.jpg);
+            background-position: center;
+            background-size: cover; */
+        }
+
+        .cont {
+            width: 70%;
+            height: 450px;
+            border: solid 1px rgb(178, 103, 162);
+        }
+
+        .card {
+            display: flex;
+            width: 70%;
+           
+        }
+
+        .bill {
+            width: 28%;
+        }
+
+        ul {
+            width: 100%;
+           
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            
+        }
+
+        .he {
+            display: inline-block;
+            height: 60px;
+            align-content: center;
+            width: 100% !important;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+            font-size: 20px;
+            /* background-color: wheat; */
+            
+        }
+        li a:hover
+        {
+            color: greenyellow;
+        }
+
+        .box {
+            width: 33%;
+            height: 250px;
+            /* border: solid  black; */
+
+        }
+
+        .boximg img {
+            width: 100%;
+            border-radius: 5px;
+            height: 100%;
+        }
+
+        .boximg {
+            margin: 0px 5px;
+            height: 200px;
+            /* border: solid 1px black; */
+
+        }
+
+        .box p {
+            margin: 5px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 20px;
+            /* text-align: center; */
+            /* text-align: center; */
+        }
+        .btn{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .btn button {
+            padding: 10px 15px;
+            background-color: greenyellow;
+            color: black;
+            margin-left: 5px;
+            border-radius: 10px;
+            border: none;
+            width: 80%;
+
+        }
+        .disc
+        {
+          width: 100%;
+          height: 156px;
+          /* border:  solid 1px black; */
+          overflow: auto;
+          
+        }
+        .disc input
+        {
+            width: 48%;
+            float: left;
+            padding: 10px;
+            margin: 1%;
+            background-color: greenyellow;
+            border: none;
+            border-radius: 10px;
+        }
+        #showdis
+        {
+            width: 100%;
+            
+        }
+
+    </style>
+
+    <div class="cont">
+        <h2 style="text-align: center;">HOTEL MENU</h2>
+        <header class="he">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <div class="boxcard">
+            <div class="card">
+                <div class="box">
+                    <div class="boximg">
+                        <img src="bur.png" alt="">
+                    </div>
+                    <p>Burgar</p>
+                    <p >Price: <span id="price">250</span>/-</p>
+                    <div class="btn">
+                        <button onclick="add(this)" value="250">+ Add Card</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boximg">
+                        <img src="pp.png" alt="">
+
+                    </div>
+                    <p>Pizza</p>
+                    <p >Price: <span id="price">350</span>/-</p>
+                    
+                    <div class="btn">
+                        <button onclick="add(this)" value="350">+ Add Card</button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="boximg">
+                        <img src="san.webp" alt="">
+                    </div>
+                    <p>Sandwich</p>
+                    <p >Price: <span id="pro1">450</span>/-</p>
+                    <div class="btn">
+                        <button onclick="add(this)" value="450">+ Add Card</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="bill">
+                <div class="total">
+                   <p>Amoute : <span id="showtotal"></span></p>
+                </div>
+                <div class="gstnum">
+                    <p>
+                        GST : <span id="gstshow"></span>
+                    </p>
+                </div>
+                <div class="coupan">
+                    <div class="disc">
+                        <input type="button" onclick="dis(5)" value="5% Discount" >
+                        <input type="button" onclick="dis(10)" value="10% Discount" >
+
+                        <input type="button" onclick="dis(15)" value="15% Discount" >
+                        <input type="button" onclick="dis(20)" value="20% Discount" >
+                        
+                        <span id="showdis"></span>
+                    </div>
+                </div>
+                <div class="totalamt">
+                    <p> <b>Total Amout : <span id="totalamt"></span></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <ul>
+        <input class="bullet" data-id="price" onclick="hide(this);" value="xyz">11233</input>
+        <br/>
+        <li class="bullet" onclick="hide(this);">2</li>
+        <li class="bullet" onclick="hide(this);">3</li>
+        <li class="bullet" onclick="hide(this);">4</li>
+      </ul> -->
+      
+    <script>
+        var amt =0;
+        function add(price) {
+           
+            pricee = parseInt(price.value); 
+            amt += pricee;
+            document.getElementById("showtotal").innerText =amt;
+
+            gst = amt * 18 /100; 
+            document.getElementById("gstshow").innerText = gst;
+            grossamt = amt + gst ;
+            
+        }
+        function dis(per)
+        {
+           coupan = grossamt * per / 100;
+        
+            col = document.getElementById("showdis").innerText = "Flat "+per+"% Discount";
+            finalamt = grossamt - coupan;  
+            document.getElementById("totalamt").innerText = finalamt;
+        }
+
+        // function hide(e)
+        // {
+        //     console.log(e.getAttrubte());
+
+        // }
+    </script>
+</body>
+
+</html>

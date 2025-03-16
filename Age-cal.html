@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            height: 100vh;
+        }
+        .box
+        {
+            width: 200px;
+            height: 220px;
+            border: 1px solid black;
+            border-radius: 15px;
+            margin: 0px auto;
+            padding: 20px;
+            overflow: hidden;
+        }
+        input
+        {
+            width: 100px;
+            margin-left: 15px;
+
+        }
+        h2{
+            text-align: center;
+        }
+        p{
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        
+    </style>
+    <div class="box">
+       <h2 >Age Calculate</h2>
+      
+        <input type="text" id="year" placeholder="Enter Year ">  <br> <br>
+    
+    
+        <input type="text" id="month" placeholder="Enter Month">  <br><br>  
+        <button onclick="submitt()" style="margin-left: 15px;">CAlCULATE</button> <br><br>
+
+        <p id="span"> </p>
+        <!-- <h3 id="span2"></h3> -->
+</div>
+    <script>
+       function submitt()
+       {
+           var a = new Date();
+            var b = (a.getFullYear()) - document.getElementById("year").value
+            var cm = a.getMonth() + 1;
+
+            document.getElementById("span").innerText ="Year Of: "+b+" Month : "+cm;
+
+
+       }
+    </script>
+</body>
+</html>

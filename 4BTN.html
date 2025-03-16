@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #rac
+    {
+        background-color: rgb(201, 138, 138);
+        border: none;
+        width: 80px;
+        height: 40px;
+        color: whitesmoke;
+    }
+    #squ
+    {
+        background-color: rgb(124, 172, 120);
+        border: none;
+        width: 60px;
+        height: 60px;
+        color: whitesmoke;
+
+    }
+    #cir
+    {
+        background-color: rgb(213, 109, 186);
+        border: none;
+        width: 60px;
+        color: whitesmoke;
+        height: 60px;
+    }
+    #tri
+    {
+        background-color: rgb(64, 8, 22);
+        border: none;
+        width: 80px;
+        height: 80px;
+        color: whitesmoke;
+
+    }
+</style>
+<body>
+    <input type="button"  value="Ractangal" id="rac" onclick="rac()"> <br> <br>
+    <input type="button"  value="Square" id="squ" onclick="squ()"> <br> <br>
+    <input type="button"  value="Circal" id="cir" onclick="cir()"> <br> <br>
+    <input type="button"  value="Triangal" id="tri" onclick="tri()"> <br> <br>
+
+    <script>
+        function rac()
+        {
+           r =  document.getElementById("rac");
+           r.style.width ="140px";
+           r.style.height ="80px";   
+           r.style.backgroundColor = "rgb(184, 184, 226)";        
+        }
+        function squ()
+        {
+            s =  document.getElementById("squ");
+           s.style.width ="120px";
+           s.style.height ="120px"; 
+              s.style.backgroundColor= "rgb(205, 223, 102)";
+              
+
+        }
+        function cir()
+        {
+            c = document.getElementById("cir");
+            c.style.borderRadius = "50%";
+            c.style.backgroundColor = "rgb(71, 97, 99)";
+        }
+        function tri()
+        {
+            t = document.getElementById("tri");
+            // t.style
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // callbackss
+      // function main(msg,response,reject)
+      // {
+      //         if(msg)
+      //         {
+      //             response();
+      //         }
+      //         else
+      //         {
+      //             reject();
+      //         }
+
+      // }
+
+      // function yes()
+      // {
+      //     document.write("Yes");
+      // }
+
+      // function no()
+      // {
+      //     document.write("No");
+      // }
+
+      // main(confirm("Are you want delete?"),yes,no);
+
+      // spread  - ...
+
+      let arr = [10,20,30,40];
+
+      // let arr2 = [50,60,70];
+
+      // console.log(arr1);
+
+      // let mer = [...arr1,...arr2];
+
+      // document.write(mer);
+
+      let obj1 = [
+        { name: "cdmi", age: 20, email: "cdmi@gmail.com" },
+        { name: "meet", age: 20, email: "meet@gmail.com" },
+        { name: "ashok", age: 30, email: "ashok@gmail.com" },
+        { name: "sidh", age: 25, email: "sidh@gmail.com" },
+      ];
+
+      // let per = {
+      //     name: "cdmi"
+      // }
+
+      // let omer = {...obj1,...per};
+
+      // console.log(omer);
+
+      // function test(a,b,...c)
+      // {
+      //     // alert("Dsfd");
+      //         // document.write(c);
+      //         console.log(c);
+
+      // }
+
+      // let arr = [10, 20, 30, 40, 50];
+
+      // let [a,b,...c] = arr;
+
+      // console.log(a,b)
+
+      // console.log(c);
+
+      // test(arr);
+
+      //arrow
+
+      
+
+      // arr.map((value,index,name)=>{
+      //     console.log(value,index,name);
+      // })
+
+      // obj1.map((item,index)=>{
+      //     console.log(item.email);
+      // })
+      
+      
+      //filter
+
+      let arrs = [10,20,35,90,34,50,35];
+
+      // var data = arrs.filter((value)=>{
+      //     return value <= 35;
+      // })
+      // // document.write("<br>",data);
+
+      // var data = arrs.filter((value,i)=>{
+      //     return i !== 2;
+      // })
+
+      // document.write(data);
+
+      // array squared
+
+      //   const input = [1, 2, 3, 4, 5];
+
+      //   input.map((num) => {
+      //     document.write("<br>" + Math.pow(num, 2));
+      //   });
+      
+      //   //  Sum Of Every Positive Element
+      
+      // const inputs = [1, -4, 12, 0, -3, 29, -150];
+      // var data = inputs.filter((value) => {
+
+      //   return value > 0;
+      // });
+      // sum=0;
+      // for(i=0;i<data.length;i++){
+      //   sum+=data[i];
+      // }
+      // console.log(sum)
+
+
+     
+
+      setTimeout(()=>{
+          console.log("Hello");
+      },3000)
+
+      console.log("Hello 3");
+
+      let mypromise = new Promise((response, reject) => {
+        setTimeout(() => {
+          if (true) { 
+            response("Data");
+          } else {
+            reject("Error");
+          }
+        }, 3000);
+      });
+
+      async function demo() {
+        try {
+          let data = await mypromise;
+          console.log(data);
+        } catch (error) {
+          console.error(error);
+        }
+
+        console.log("hello");
+      }
+
+      demo();
+
+      
+    </script>
+  </body>
+</html>

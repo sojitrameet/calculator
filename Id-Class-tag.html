@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #email
+        {
+            color: brown;
+        }
+    </style>
+    <input type="email"  id="email" value="meet@gmail.com"><br><br>
+
+    <input type="email" id="email" value="heet@gmail.com"><br><br>
+
+    <input type="email"  class="email" value="meet@gmail.com"><br><br>
+
+    <input type="email" class="email" value="heet@gmail.com"><br><br>
+
+    <h2 id="he">Hello Creative And Multimeadia Institude .</h2>
+    <script>
+
+        var col = document.getElementById("email").value;
+        console.log(col)
+
+        var cla = document.getElementsByClassName("email");
+        console.log(cla)
+
+        // cla.forEach((element) => {
+        //      console.log(element)
+        // });
+        tg = document.getElementById("he").tagName;
+        console.log(tg)
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <button onclick="showConfirm()">Click me for Confirm</button> -->
+
+  <script>
+    var a = 50; b = 30;
+    // c=a;
+    // a=b;
+    // b=c;
+    // document.write("<br>"+a)
+    // document.write("<br>"+b)
+
+    //     var add = a+b;
+    //     var sub = a-b;
+
+    //     document.write("Addition  : "+add)
+    //     document.write("<br>Subtraction :"+sub)
+    //
+    // if(a<b)
+    // {
+    //     document.write("A is Min")
+    // }
+    // else{
+    //     document.write("B is Min");
+    // }
+
+    // if(a==b)
+    // {   
+    //     document.write("a b Are Same...")
+
+    // }
+    // else if(a<b)
+    // {
+    //     document.write("A is min")
+    // }
+    // else if(a>b)
+    // {
+    //     document.write("A is Max")
+    // }
+    // else if(b<a)
+    // {
+    //     document.write("B is Min ")
+    // }
+    // else if(b>a)
+    // {
+    //     document.write("B is Max")
+    // }
+
+    //     n =2;
+    // switch (n)
+    // {
+    //     case 1 : 
+    //             document.write("One")
+    //             break;
+    //     case 2 :
+    //             document.write("Two")
+    //             break;
+    // }
+
+
+    // for(i=1;i<=5;i++)
+    // {
+    //   document.write("<br>"+i)
+    // }
+
+
+    // var pi=3.14;re = 110; len=250;wid=200;
+    // n=4;
+    // switch(n)
+    // {
+    //       case 1:
+    //           ar = pi * re * re;
+    //           document.write("Area of Circal"+ar);
+    //           break;
+    //       case 2:
+    //           sq = re * re;
+    //           document.write("Area of square"+sq);
+    //           break;
+    //       case 3:
+    //         rec = len * wid;
+    //         document.write("Area of Rectangal"+rec);
+    //         break;
+    //       case 4:
+    //         are = pi * 2 * re;
+    //         document.write("Area of circumference "+are);
+
+    // }
+    // function showConfirm() {
+    //   var userConfirmed = confirm("Do you want to proceed?");
+
+    //   if (userConfirmed) {
+    //     alert("You clicked OK!");
+    //   } else {
+    //     alert("You clicked Cancel!");
+    //   }
+    // }
+
+
+
+    //  While loop 
+
+    // pelindrom
+    //   let n = 121;rev=0;
+    //   let rem;
+    //    let i;
+    //   i=n;
+    // while(n!=0)
+    // {
+    //     rem = n % 10;
+    //     rev =  (rev * 10) + rem;
+    //     n = parseInt (n /10);
+
+
+    // }
+    // if(i==rev)
+    // {   
+    //     document.write("Pelindrom : "+rev);
+    // }
+    // else
+    // {
+    //   document.write("Not Pelindrom : "+rev);
+
+    // }
+
+    // amsrong Number
+    // let n = 153; rev = 0;
+    // let rem;
+    // let i;
+    // i = n;
+    // while (n != 0) {
+    //   rem = n % 10;
+    //   rev = rem * rem * rem + rev;
+    //   n = parseInt(n / 10);
+    // }
+    // if (i == rev) {
+    //   document.write("Amstrong Number : " + rev);
+    // }
+    // else {
+    //   document.write("Not Amstrong Number : " + rev);
+
+    // }
+
+    var n;
+    n = prompt("Enetr the no N: ",0)
+    document.write("N is : "+n)
+    document.write("<br>")
+
+    // table 
+    // for(i=0;i<=10;i++)
+    // {
+
+    //   document.write(""+n+"*"+""+i+"="+i*n +"<br>");
+    // }
+    //   fact=1;
+    // for(i=1;i<=n;i++)
+    // {
+    //     fact=fact*i;
+
+    // }
+    // document.write("Fact = "+ fact);
+
+    // reverse 
+    // var rem;rev=0;
+    // while(n!=0)
+    // {
+    //     rem = n % 10;
+    //     rev =  (rev * 10) + rem;
+    //     n = parseInt (n /10);
+    // }
+    // document.write("Revarse :"+rev)
+
+    // length
+
+    // var rem; rev = 0;
+
+    //  total 
+    // while(n!=0)
+    // {
+    //   rem = n  % 10;
+    //   rev = rev + rem ;
+    //   n = parseInt(n/10);
+    // }
+    // document.write("Total : "+rev);
+
+    // prime number
+
+    var temp;
+    var j;
+      for(i=2;i<=n;i++)
+      {
+         temp=1;
+        for(j=2;j<i;j++)
+        {
+          if(i%j == 0)
+          {
+             temp=0;  
+             break;
+
+          }
+        }
+        if(temp == 1)
+        {
+          document.write("<br>Prime : "+i) 
+        }
+      }
+
+    //  //alert("Hello Creative")
+    //  if(confirm("You Are under 18 ?"))
+    //  {
+    //   document.write("You Can Drive Car");
+
+    //  }
+    //  else
+    //  {
+    //   document.write("You Can Not Drive Car")
+    //  }
+
+    // var a;
+    // var pas = 123;
+    // // ask=prompt("Enter The Password..")
+    // // document.write(a);
+    // var l = 0;
+    // do {
+    //   ask = prompt("Enter The Password..")
+    //   if (l == 2) {
+    //     break;
+
+    //   }
+    //   l++;
+
+    // } while (pas != ask)
+    // if (pas == ask) {
+    //   document.write("Password Is Correct ...")
+    // }
+    // else {
+    //   document.write("Password Is Not Correct ...")
+    // }
+  </script>
+</body>
+
+</html>

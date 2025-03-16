@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #on-off {
+            display: block;
+            height: 20px;
+        }
+
+        #on {
+            display: none;
+        }
+    </style>
+    <img src="off.gif" alt="" id="bulb" value="2" onclick="bulb()">
+    <img src="on.gif" alt="" id="on" value="1" onclick="bulb()">
+
+    <!-- <img src="pic_bulbon-on.gif" alt="" value = "1" id="on"  onclick="bulb()"> -->
+
+    <!-- <input type="button" id="on-off" value="ON - OFF" onclick="bulb()"> -->
+
+    <script>
+        flag = 0;
+
+        function bulb() {
+
+            off = document.getElementById("bulb");
+            // on = document.getElementById("on");
+            // document.write(off).value;
+
+            
+            if(flag == 0) {
+                off.src = "on.gif";
+                flag = 1;
+
+
+            }
+            else  {
+                off.src = "off.gif";
+                flag = 0;
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

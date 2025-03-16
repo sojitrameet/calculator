@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            /* background-color: #FA8BFF; */
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+            padding: 10px 20px;
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+            border: none;
+            border-radius: 15px;
+
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button onclick="Hello()"> On CLick </button>
+    <button  ondblclick ="Hello()">  On DBL CLick </button>
+    <button  onmouseover ="Hello()">  On Mouseover </button>
+    <button  onmouseout ="Hello()">  On Mouseout </button>
+    
+
+    
+    <p  id="btn-ev"> </p>
+    <script>
+        function Hello()
+        {
+            // document.getElementById()
+            alert("Welcome To CDMI.")
+        }
+    </script>
+</body>
+</html>
